@@ -1,0 +1,10 @@
+{
+  "name" : "API Development",
+  "enabled" : true,
+  "restricted" : false,
+  "development" : true,
+  "apis" : [ {
+    "apiName" : "Play with Numbers_v2.yaml",
+    "apiVersion" : "2.0.0"
+  } ]
+}
