@@ -4,17 +4,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh("chmod +x ./test.sh | ./test.sh")
+                sh '''
+                    chmod +x ./test.sh
+                    ./test.sh
+                '''
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing....'
+                // Add any additional testing steps here
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                // Add deployment steps here
             }
         }
     }
