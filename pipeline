@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cd /apim_cli/apim-cli-1.14.4/scripts/'
+                sh './test.sh'
             }
         }
         stage('Test') {
             steps {
-                sh './apim.sh api get -s $Env'
+                echo 'Testing....'
             }
         }
         stage('Deploy') {
