@@ -63,7 +63,7 @@
       }
     } ]
   } ],
-  "clientOrganizations" : [ "Calculate_consumer" ],
+  "clientOrganizations" : [ "API Development" ],
   "applications" : [ {
     "name" : "calculate_app"
   } ]
