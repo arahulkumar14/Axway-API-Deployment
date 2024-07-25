@@ -1,0 +1,249 @@
+swagger: "2.0"
+info:
+  description: "This swagger is to perform mathematical operation."
+  version: "2.0.0"
+  title: "Play with Numbers_v2"
+  contact:
+    email: "rkumara@axway.com"
+host: "10.133.131.228:8080"
+basePath: "/v2"
+schemes:
+- "https"
+- "http"
+paths:
+  /add:
+    get:
+      tags:
+      - "mathsOperation"
+      summary: "Add two numbers"
+      description: "This operation is to find addition of two provide numbers."
+      operationId: "addition"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "num1"
+        in: "query"
+        description: "First number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "num2"
+        in: "query"
+        description: "Second number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "client_id"
+        in: "header"
+        description: "apiKey"
+        required: true
+        type: "string"
+        format: "str"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/operationResponse"
+        "400":
+          description: "Invalid input"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        "401":
+          description: "Invalid credential"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /subtract:
+    get:
+      tags:
+      - "mathsOperation"
+      summary: "Subtract two numbers"
+      description: "This operation is to find difference between two provide numbers."
+      operationId: "subtraction"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "num1"
+        in: "query"
+        description: "First number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "num2"
+        in: "query"
+        description: "Second number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "client_id"
+        in: "header"
+        description: "apiKey"
+        required: true
+        type: "string"
+        format: "str"     
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/operationResponse"
+        "400":
+          description: "Invalid input"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        "401":
+          description: "Invalid credential"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /mutiply:
+    get:
+      tags:
+      - "mathsOperation"
+      summary: "Multiply two numbers"
+      description: "This operation is to find mutiplication of provided numbers."
+      operationId: "mutiplication"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "num1"
+        in: "query"
+        description: "First number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "num2"
+        in: "query"
+        description: "Second number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "client_id"
+        in: "header"
+        description: "apiKey"
+        required: true
+        type: "string"
+        format: "str"      
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/operationResponse"
+        "400":
+          description: "Invalid input"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        "401":
+          description: "Invalid credential"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /divide:
+    get:
+      tags:
+      - "mathsOperation"
+      summary: "Divide two numbers"
+      description: "This operation is to find division of provided numbers."
+      operationId: "division"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "num1"
+        in: "query"
+        description: "First number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "num2"
+        in: "query"
+        description: "Second number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "client_id"
+        in: "header"
+        description: "apiKey"
+        required: true
+        type: "string"
+        format: "str"      
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/operationResponse"
+        "400":
+          description: "Invalid input"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        "401":
+          description: "Invalid credential"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /all:
+    get:
+      tags:
+      - "performAll"
+      summary: "Perform all basic operation of maths"
+      description: ""
+      operationId: "performAll"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "num1"
+        in: "query"
+        description: "First number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "num2"
+        in: "query"
+        description: "Second number for the operation"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "client_id"
+        in: "header"
+        description: "apiKey"
+        required: true
+        type: "string"
+        format: "str"      
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/performAllResponse"
+        "400":
+          description: "Invalid input"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        "401":
+          description: "Invalid credential"
+          schema:
+            $ref: "#/definitions/errorResponse"
+definitions:
+  performAllResponse:
+    type: "object"
+    properties:
+      addition:
+        type: "string"
+      sbutraction:
+        type: "string"
+      multiplication:
+        type: "string"
+      division:
+        type: "string"
+  operationResponse:
+    type: "object"
+    properties:
+      result:
+        type: "string"
+  errorResponse:
+    type: "object"
+    properties:
+      type:
+        type: "string"
+      code:
+        type: "string"
+      detail:
+        type: "string"
+

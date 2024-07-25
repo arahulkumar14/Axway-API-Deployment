@@ -1,0 +1,25 @@
+{
+  "name" : "Play with Numbers_v1",
+  "path" : "/v1",
+  "state" : "published",
+  "version" : "1.0",
+  "organization" : "API Development",
+  "apiSpecification" : {
+    "resource" : "Play with Numbers_v1.json"
+  },
+  "summary" : "This swagger is to perform mathematical operation.",
+  "vhost" : "10.128.150.82:8065",
+  "backendBasepath" : "http://localhost:8080",
+  "inboundProfiles" : {
+    "_default" : {
+      "monitorAPI" : true,
+      "queryStringPassThrough" : false,
+      "monitorSubject" : "authentication.subject.id",
+      "securityProfile" : "_default",
+      "corsProfile" : "_default"
+    }
+  },
+  "applications" : [ {
+    "name" : "test"
+  } ]
+}

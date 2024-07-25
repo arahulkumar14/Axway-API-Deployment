@@ -1,0 +1,31 @@
+{
+   "name":"Sample Minimal API filtered",
+   "path":"/sample/minimal/filtered/apispecification/api/v1",
+   "state":"unpublished",
+   "version":"1.0.0",
+   "apiSpecification":{
+      "resource":"../petstore.json",
+      "filter":{
+         "include":[
+            {
+               "tags":[ "pet", "store" ]
+            },
+            {
+               "tags":[ "user" ],
+               "paths":[ "/user/{username}:*", "/user/login:GET", "/user/logout:GET" ]
+            }
+         ],
+         "exclude":[ 
+         	{
+               "paths":[ "*:DELETE" ]
+            },
+			{
+				"models": [ "ApiResponse" ]
+			}
+         ]
+      }
+   },
+   "organization":"API Development",
+   "customProperties":{
+   }
+}
