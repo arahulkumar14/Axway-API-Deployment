@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'cd /apim_cli/apim-cli-1.14.4/scripts/'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh './apim.sh api get -s $Env'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
