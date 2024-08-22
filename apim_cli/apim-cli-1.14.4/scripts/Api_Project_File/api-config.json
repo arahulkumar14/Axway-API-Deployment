@@ -1,14 +1,13 @@
 {
-  "name" : "Play with Numbers_v1",
+  "name" : "Encryption_Decryption",
   "path" : "/v1",
   "state" : "published",
   "version" : "1.0",
-  "organization" : "API Development",
+  "organization" : "Demo_CICD",
   "apiSpecification" : {
-    "resource" : "Play with Numbers_v1.json"
+    "resource" : "Encryption_Decryption.json"
   },
-  "summary" : "This swagger is to perform mathematical operation.",
-  "vhost" : "10.128.150.82:8065",
+  "summary" : "Encryption_Decryption",
   "backendBasepath" : "http://localhost:8080",
   "inboundProfiles" : {
     "_default" : {
@@ -18,8 +17,5 @@
       "securityProfile" : "_default",
       "corsProfile" : "_default"
     }
-  },
-  "applications" : [ {
-    "name" : "test"
-  } ]
+  }
 }

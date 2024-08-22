@@ -1,0 +1,16 @@
+{
+  "name" : "Demo_app",
+  "organization" : "Demo_CICD",
+  "state" : "approved",
+  "enabled" : true,
+  "credentials" : [ {
+    "credentialType" : "apikeys",
+    "enabled" : true,
+    "secret" : "04464232-dfee-4343-96a6-3f85e09af8b3",
+    "corsOrigins" : [ ],
+    "apiKey" : "ebb810d4-4002-4547-96ef-434e7f05eebc"
+  } ],
+  "apis" : [ ],
+  "permissions" : [ ],
+  "appScopes" : [ ]
+}

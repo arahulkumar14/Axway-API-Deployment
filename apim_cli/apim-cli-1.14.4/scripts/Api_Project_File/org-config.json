@@ -1,0 +1,7 @@
+{
+  "name" : "Demo_CICD",
+  "enabled" : true,
+  "restricted" : false,
+  "development" : true,
+  "apis" : [ ]
+}
