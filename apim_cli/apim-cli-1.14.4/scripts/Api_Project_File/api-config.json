@@ -8,7 +8,7 @@
     "resource" : "Encryption_Decryption.json"
   },
   "summary" : "Encryption_Decryption",
-  "backendBasepath" : "http://localhost:8080",
+  "backendBasepath" : "http://10.128.150.82:8080",
   "inboundProfiles" : {
     "_default" : {
       "monitorAPI" : true,
